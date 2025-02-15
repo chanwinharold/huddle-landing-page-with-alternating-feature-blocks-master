@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL here](https://your-solution-url.com)
-- Live Site URL: [live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL here](https://github.com/chanwinharold/huddle-landing-page-with-alternating-feature-blocks-master)
+- Live Site URL: [live site URL here](https://huddle-landing-page-with-alternating-fe-chanwinharolds-projects.vercel.app/)
 
 ### Built with
 
