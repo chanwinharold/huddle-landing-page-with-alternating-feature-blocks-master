@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@theme base {
+    /*Primary*/
+
+    --color-customPink: hsl(322, 100%, 66%);
+    --color-customHoverPink: hsla(322, 100%, 66%, 0.8);
+
+    /*Neutral*/
+
+    --color-customPaleCyan: hsl(193, 100%, 96%);
+    --color-customDarkCyan: hsl(192, 100%, 9%);
+    --color-customGrayishBlue: hsl(208, 11%, 55%);
+}
+
+@layer base {
+    html { font-family: 'Open Sans', sans-serif;
+        h1, h2 { font-family: 'Poppins', sans-serif; }
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        min-height: 100vh;
+    }
+    main {
+        @apply bg-[url('../images/bg-hero-desktop.svg')] max-sm:bg-[url('../images/bg-hero-mobile.svg')];
+        background-blend-mode: multiply;
+        background-size: cover;
+    }
+    img[alt="logo"] { @apply sm:w-fit max-sm:w-28 h-6 }
+
+    article {
+        @apply w-[90vw] rounded-md p-10 flex justify-center items-center md:gap-30 lg:gap-50 max-md:flex-col-reverse max-md:gap-10;
+        box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+
+        section { @apply space-y-5;
+
+            h2 { @apply font-bold md:text-3xl; }
+            p { @apply md:text-lg; }
+        }
+        img { @apply md:w-3/10 max-md:size-48 }
+    }
+    aside {
+        @apply rounded-lg m-5 p-10 flex flex-col justify-around items-center gap-5;
+        @apply bg-white -mb-35 z-5;
+        box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+        h2 { @apply text-xl text-center font-bold; }
+        button { @apply md:w-xs rounded-full p-3 bg-customPink text-white font-semibold }
+    }
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+}
